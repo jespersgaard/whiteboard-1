@@ -8,11 +8,11 @@
 	<body>
 		<div class = "header">
 			<div class = "wrapper">
-				<h1 id = "logo">WhiteBoard <font class ="title">@yield('title')</font>
+				<h1 id = "logo">WhiteBoard // <font class ="title">@yield('title')</font>
 				</h1>
 				@if(Auth::check())
 					<span class = "greeting">
-						Logged in as <i> {{ Auth::user()-> fname, " ", Auth::user()->lname}}</i>
+						Logged in as <i> {{ Auth::user()->fname, " ", Auth::user()->lname}}</i>
 					</span>
 					<span class = "logout">{{ HTML::link_to_action('logout', 'LOGOUT') }}</span>
 				@else

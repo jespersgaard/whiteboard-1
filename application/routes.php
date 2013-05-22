@@ -32,6 +32,8 @@
 |
 */
 
+Route::controller(Controller::detect());
+
 Route::get('/', function()
 {
 	return View::make('home.index');
@@ -63,13 +65,9 @@ Route::post('login', function(){
 
 Route::get('logout', function(){
 	Auth::logout();
-
+	Session::flush();
 	return Redirect::to('login');
 });
-
-Route::get('admin', array('before' => 'auth', 'do' => function(){
-	return View::make('admin');
-}));
 
 /*
 |--------------------------------------------------------------------------

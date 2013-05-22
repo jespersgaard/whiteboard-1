@@ -19,7 +19,6 @@ class Create_Users {
 			$table->string('email', 128)->unique();
 			$table->string('password', 64);
 			$table->integer('role')->unsigned();
-			$table->timestamps();
 
 			$table->foreign('role')->references('id')->on('user_roles');
 		});
