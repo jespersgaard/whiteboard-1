@@ -32,7 +32,7 @@
 		</div>
 		<div class = "footer">
 			<div class = "wrapper">
-				<div>Copyright 2013 Luis Pablo</div>
+				<div>Copyright &copy 2013 Luis Pablo</div>
 			</div>
 		</div>
 	</body>

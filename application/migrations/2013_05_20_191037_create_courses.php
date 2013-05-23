@@ -14,7 +14,7 @@ class Create_Courses {
 
 			$table->string('code', 10)->unique();
 			$table->string('name');
-			$table->text('description');
+			$table->text('description')->nullable();
 		});
 	}
 

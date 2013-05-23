@@ -39,29 +39,6 @@ Route::get('/', function()
 	return View::make('home.index');
 });
 
-Route::get('login', function(){
-	return View::make('login');
-});
-
-Route::post('login', function(){
-	// get POST data
-	$userdata = array(
-		'username' => Input::get('username'),
-		'password' => Input::get('password')
-	);
-
-	if (Auth::attempt($userdata))
-	{
-		//print_r (DB::query('SELECT * FROM users'));
-		return Redirect::to('admin');
-	}
-	else
-	{
-		// authentication failure
-		return Redirect::to('login')
-			->with('login_errors', true);
-	}
-});
 
 Route::get('logout', function(){
 	Auth::logout();
